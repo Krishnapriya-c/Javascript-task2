@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="task2.js"></script>
+</head>
+<body>
+	<style>
+     body  {
+  background-image: url("./images/img1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+button {
+  height: 50px;
+  width: 50px;
+  margin: 10px 4px;
+  border: none !important;
+}
+.in{
+	width: 270px;
+	border:2px solid black;
+	border-radius: 10px;
+}
+.bc{
+	border:2px solid black;
+	width:300px;
+	margin: 10vh auto;
+}
+
+
+</style>
+
+	<div class="container">
+	<h2 class="text-center">Bootstrap Calculator</h2>
+</div>
+	<div class="container text-center mt-5">
+		<div class="bc bg-dark">
+      <div class="row  mx-auto d-block" id="result" >
+      <form name="calc">
+        <input type="text" class="p-4 bg-light text-right mt-3 in" name="result" readonly>
+      </form>
+    </div>
+    <div class="row mx-auto d-block">
+      <button id="allClear" type="button" class="btn btn-danger" onclick="clearscreen()">AC</button>
+      <button id="clear" type="button" class="btn btn-warning" onclick="clearscreen()">CE</button>
+      <button id="%" type="button" class="btn btn-info" onclick="myFunction(this.id)">%</button>
+      <button id="/" type="button" class="btn btn-info" onclick="myFunction(this.id)">÷</button>
+    </div>
+    <div class="row mx-auto d-block">
+      <button id="7" type="button" class="btn btn-info" onclick="myFunction(this.id)">7</button>
+      <button id="8" type="button" class="btn btn-info" onclick="myFunction(this.id)">8</button>
+      <button id="9" type="button" class="btn btn-info" onclick="myFunction(this.id)">9</button>
+      <button id="*" type="button" class="btn btn-info" onclick="myFunction(this.id)">x</button>
+    </div>
+    <div class="row mx-auto d-block">
+      <button id="4" type="button" class="btn btn-info" onclick="myFunction(this.id)">4</button>
+      <button id="5" type="button" class="btn btn-info" onclick="myFunction(this.id)">5</button>
+      <button id="6" type="button" class="btn btn-info" onclick="myFunction(this.id)">6</button>
+      <button id="-" type="button" class="btn btn-info" onclick="myFunction(this.id)">-</button>
+    </div>
+    <div class="row mx-auto d-block">
+      <button id="1" type="button" class="btn btn-info" onclick="myFunction(this.id)">1</button>
+      <button id="2" type="button" class="btn btn-info" onclick="myFunction(this.id)">2</button>
+      <button id="3" type="button" class="btn btn-info" onclick="myFunction(this.id)">3</button>
+      <button id="+" type="button" class="btn btn-info" onclick="myFunction(this.id)">+</button>
+    </div>
+    <div class="row mx-auto d-block">
+      <button id="0" type="button" class="btn btn-info" onclick="myFunction(this.id)">0</button>
+      <button id="." type="button" class="btn btn-info" onclick="myFunction(this.id)">.</button>
+      <button id="blank" type="button" class="btn btn-info" onclick="deleteChar(calc.result.value)"> <-- </button>
+      <button id="" type="button" class="btn btn-success" onclick="calculate()">=</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
